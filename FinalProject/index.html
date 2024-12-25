@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Survey Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <h1 id="title">Survey Form - Machine Learning</h1>
+    <p id="description">Project built by Yasmin - Intructed by <a href="https://www.freecodecamp.org/"
+            target="_blank">FreeCodeCamp</a></p>
+    <form action="" id="survey-form">
+        <div>
+            <label for="name" name="name" id="name-label">Name</label>
+            <input type="text" id="name" required placeholder="Enter your name">
+        </div>
+        <div>
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" required placeholder="Enter you email">
+        </div>
+        <div>
+            <label for="number" id="number-label">Age (optional)</label>
+            <input type="number" name="number" id="number" min="0" max="120" placeholder="Age (only numbers)">
+        </div>
+        <div>
+            <legend>What's your profile?</legend>
+            <label for="ML-career"><input type="radio" name="carrer-professional" id="ML-career" value="ML-engineer"
+                    class="inline">Machine Learning engineer</label>
+
+            <label for="DS-career"><input type="radio" name="carrer-professional" id="DS-career" value="data-scientist"
+                    class="inline">Data Scientist</label>
+
+            <label for="FSdev-carrer"><input type="radio" name="carrer-professional" id="FSdev-carrer"
+                    value="full-satck-developer" class="inline">Full Stack Developer</label>
+
+            <label for="other-career"><input type="radio" name="carrer-professional" id="other-career" value="other"
+                    class="inline">Other</label>
+
+        </div>
+        <div>
+            <label for="dropdown">Which option best describes your current role?</label>
+            <select name="dropdown" id="dropdown">
+                <option value="" disabled>Select current role</option>
+                <option value="1">Student</option>
+                <option value="2">Works in the field (ML)</option>
+                <option value="3">Works in another field</option>
+                <option value="4">Prefer not say</option>
+                <option value="5">Other</option>
+            </select>
+        </div>
+        <div>
+            <p>Which programming languages do you use most?</p>
+            <label for="python" class="programming-language"><input type="checkbox" id="python" name="language"
+                    value="python" class="inline">Python</label>
+            <label for="r" class="programming-language"><input type="checkbox" id="r" name="language" value="r"
+                    class="inline">R</label>
+            <label for="java" class="programming-language"><input type="checkbox" id="java" name="language" value="java"
+                    class="inline">Java</label>
+            <label for="cpp" class="programming-language"><input type="checkbox" id="cpp" name="language" value="cpp"
+                    class="inline">C++</label>
+            <label for="other" class="programming-language"><input type="checkbox" id="other" name="language"
+                    value="other" class="inline">Other</label>
+        </div>
+
+        <div>
+            <label for="comment">Any comments?
+                <textarea id="comment" name="comment" rows="3" cols="30"
+                    placeholder="I like coding on the beach..."></textarea>
+            </label>
+        </div>
+        <div>
+            <button type="submit" id="submit" class="submit-button">
+                Submit
+            </button>
+        </div>
+    </form>
 </body>
+
 </html>
